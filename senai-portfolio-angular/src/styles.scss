@@ -1,1 +1,514 @@
-/* You can add global styles to this file, and also import other style files */
+// SCSS Variables
+// Replaces CSS :root variables for compile-time use.
+$color-primary: #1a3264;
+$color-primary-dark: #0a1a33;
+$color-primary-light: #2a4a8a;
+$color-accent: #3a5c9a;
+$color-text: #ffffff;
+$color-text-secondary: rgba(255, 255, 255, 0.8);
+
+$shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.25);
+$shadow-md: 0 8px 20px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+$border-radius-sm: 15px;
+$border-radius-md: 16px;
+$border-radius-lg: 24px;
+
+$transition-default: all 0.3s ease;
+$font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+// Mixin for properties with vendor prefixes
+@mixin backdrop-blur($radius) {
+  backdrop-filter: blur($radius);
+  -webkit-backdrop-filter: blur($radius);
+}
+
+// ----------------------------------------------------
+
+/* Reset e configurações globais */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+  padding-top: 70px;
+  /* Espaço para a navbar fixa */
+  background: linear-gradient(150deg, $color-primary-dark 0%, #1c2a4a 35%, $color-primary 70%, #2a4573 100%);
+  color: $color-text;
+  overflow-x: hidden;
+  /* Previne rolagem horizontal */
+}
+
+ul {
+  margin-bottom: 0rem;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+  transition: $transition-default;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ----------------------------------------------------
+
+/* Layout e contêiner */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+// ----------------------------------------------------
+
+/* Header & Navigation */
+.header {
+  padding: 0.75em 0;
+  background: linear-gradient(to bottom, rgba(10, 26, 51, 0.95), rgba(10, 26, 51, 0));
+  box-shadow: $shadow-sm;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: $transition-default;
+
+  .header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      position: relative;
+    }
+
+    @media (min-width: 769px) and (max-width: 1500px) {
+      width: 95%;
+    }
+
+    @media (min-width: 1245px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+
+  a {
+    padding: 10px 14px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+
+/* Mobile menu toggle button */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1001;
+
+  .hamburger {
+    content: '';
+    display: block;
+    background: $color-text;
+    height: 3px;
+    width: 30px;
+    transition: $transition-default;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      background: $color-text;
+      height: 3px;
+      width: 30px;
+      transition: $transition-default;
+      position: relative;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -5px;
+    }
+  }
+
+  &.active .hamburger {
+    background: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 3px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.main-nav {
+  display: flex;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    color: hsl(0, 0%, 100%);
+    font-size: 0.95em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: $border-radius-sm;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      outline: none;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-primary-dark;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: $transition-default;
+    box-shadow: $shadow-md;
+    visibility: hidden;
+
+    &.show {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  @media (min-width: 1245px) {
+    margin-top: 0;
+  }
+}
+
+/* Dropdown Navigation */
+.nav-item {
+  position: relative;
+
+  .dropdown {
+    width: 300px;
+    padding: 1.5em;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 110%;
+    left: -5%;
+    background-color: $color-accent;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.486);
+    z-index: 1001;
+    border-radius: 3em;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateY(-10px);
+    justify-content: center;
+
+    a {
+      color: $color-text;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 0.9em;
+      border-radius: $border-radius-sm;
+      margin-bottom: 5px;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: $color-accent;
+        padding-left: 20px;
+        font-weight: 600;
+      }
+    }
+
+    .textDropdown {
+      color: rgba(218, 218, 224, 0.657);
+      padding: 0px 16px;
+      text-align: left;
+      font-size: 0.9em;
+    }
+    
+    @media (max-width: 768px) {
+      position: static;
+      width: 100%;
+      max-height: 0;
+      padding: 0;
+      overflow: hidden;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  /* Mostrar dropdown ao focar no link ou hover */
+  &:hover .dropdown,
+  a:focus + .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    
+    @media (max-width: 768px) {
+      max-height: 500px;
+      padding: 1rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.488);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    pointer-events: none;
+    @include backdrop-blur(18px);
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  .caret-icon {
+    height: 14px;
+    width: 14px;
+    margin-left: 5px;
+    vertical-align: middle;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .caret-icon,
+  a:focus .caret-icon {
+    transform: rotate(180deg);
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+// ----------------------------------------------------
+
+/* Content sections */
+.content {
+  padding: 30px 0;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 4px;
+    background: $color-primary-light;
+    border-radius: 2px;
+  }
+
+  &:hover::after {
+    border-radius: 5px;
+  }
+}
+
+// ----------------------------------------------------
+
+/* Card styles - Reusáveis*/
+#card {
+  border-radius: $border-radius-lg;
+  margin: 40px auto;
+  min-height: 300px;
+  padding: 2rem;
+  background: radial-gradient(circle at 20% 30%, rgba(58, 81, 122, 0.4) 0%, rgba(50, 70, 105, 0.6) 30%, rgba(40, 55, 85, 0.7) 60%, rgba(25, 35, 60, 0.8) 100%);
+  border: 2px solid rgba(60, 85, 120, 0.6);
+  box-shadow: $shadow-md;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  @include backdrop-blur(5px);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: $border-radius-md;
+  margin: 20px;
+  box-shadow: $shadow-md;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  @include backdrop-blur(10px);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.nomePrincipal {
+  margin-left: 10%;
+  line-height: 90%;
+  font-weight: 900;
+  font-size: clamp(4rem, 12vw, 13vh);
+  color: $color-text;
+  text-align: left;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 769px) and (max-width: 1500px) {
+    font-size: clamp(4rem, 6vw, 90rem);
+  }
+}
+
+#cardNome {
+  margin-top: 5%;
+  min-height: 40vh;
+  height: auto;
+  background: linear-gradient(135deg, $color-primary-dark 0%, #1c304f 30%, $color-primary 70%, #2a4573 100%);
+  border-radius: 0;
+  box-shadow: $shadow-lg;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 20%, rgba(60, 85, 120, 0.4) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.sobre-content {
+  padding: 1rem;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+// ----------------------------------------------------
+
+/* Footer */
+.site-footer {
+  background-color: rgba(10, 26, 51, 0.9);
+  margin-top: 3rem;
+  padding: 3rem 0 1rem;
+  color: $color-text-secondary;
+
+  .footer-links {
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a:hover {
+      color: $color-primary-light;
+      text-decoration: underline;
+    }
+  }
+
+  .contact-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .copy {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(180, 180, 180, 0.413);
+  }
+}
