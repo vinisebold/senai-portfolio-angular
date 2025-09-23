@@ -1,1 +1,79 @@
-.vscode/
+# Compilação e distribuição Angular
+/dist
+/tmp
+/out-tsc
+
+# Cache do Angular CLI
+.angular/cache
+.angular/local
+
+# Arquivos de ambiente (se quiser versionar só os exemplos)
+src/environments/environment.*.ts
+!src/environments/environment.example.ts
+
+# Node
+/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de IDEs
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+.idea/
+*.iml
+
+# Testes
+/coverage
+/.nyc_output
+/test-results
+/junit.xml
+
+# Logs
+*.log
+logs
+*.pid
+*.seed
+*.pid.lock
+
+# Cache de builds
+.cache/
+.parcel-cache/
+
+# Arquivos de compiladores/transpiladores
+*.ngfactory.ts
+*.ngsummary.json
+*.tsbuildinfo
+
+# Arquivos gerados pelo navegador/servidor
+.sass-cache
+connect.lock
+libpeerconnection.log
+*.tgz
+
+# Docker
+docker-compose.override.yml
+*.local.yml
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# VS Code profiling
+.vscode-test/
+
+# Outros
+typings/
