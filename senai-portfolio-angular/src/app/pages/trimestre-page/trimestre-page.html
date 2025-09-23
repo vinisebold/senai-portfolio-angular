@@ -1,0 +1,21 @@
+@if (materiaId(); as id) {
+  <section class="projetos" id="projetos">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">
+          @if (materiaNome$ | async; as nome) {
+            Projetos {{ nome }} - {{ trimestreNum() }}° Trimestre
+          }
+        </h2>
+      </div>
+
+      @for (card of cards$ | async; track card.id) {
+        <app-card [data]="card" />
+      } @empty {
+        <p style="text-align: center; width: 100%;">
+          Nenhum trabalho encontrado para este trimestre.
+        </p>
+      }
+    </div>
+  </section>
+}

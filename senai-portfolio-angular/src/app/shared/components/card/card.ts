@@ -1,16 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { CardData } from '../../models/card.model';
 
 @Component({
   selector: 'app-card',
-  imports: [],
   templateUrl: './card.html',
-  styleUrl: './card.scss'
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Card {
-
-@Input() tema : string = '';
-@Input() idHabilidade : string = '';
-@Input() habilidade : string = '';
-@Input() descricaoAtividade : string = '';
-
+  data = input.required<CardData>();
 }

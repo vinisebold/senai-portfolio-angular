@@ -1,0 +1,20 @@
+{
+  "materias": [
+    {
+      "id": "ciencias-natureza",
+      "nome": "Ciências da Natureza"
+    },
+    {
+      "id": "matematica",
+      "nome": "Matemática"
+    },
+    {
+      "id": "linguagens",
+      "nome": "Linguagens e suas Tecnologias"
+    },
+    {
+      "id": "ciencias-humanas",
+      "nome": "Ciências Humanas e Sociais Aplicadas"
+    }
+  ]
+}

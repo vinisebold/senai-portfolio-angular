@@ -1,22 +1,18 @@
 import { Routes } from '@angular/router';
-import { Home } from './features/home/home';
-
 export const routes: Routes = [
-    {
-        path: 'ciencias-humanas',
-        loadChildren: () => import('./features/ciencias-humanas/ciencias-humanas-module').then(m => m.CienciasHumanasModule)
-    },
-    {
-        path: 'ciencias-natureza',
-        loadChildren: () => import('./features/ciencias-natureza/ciencias-natureza-module').then(m => m.CienciasNaturezaModule)
-    },
-    {
-        path: 'linguagens',
-        loadChildren: () => import('./features/linguagens/linguagens-module').then(m => m.LinguagensModule)
-    },
-    {
-        path: 'matematica',
-        loadChildren: () => import('./features/matematica/matematica-module').then(m => m.MatematicaModule)
-    },
-    { path: '**', component: Home }
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home').then(c => c.Home),
+    pathMatch: 'full'
+  },
+  {
+    // A ROTA MÁGICA!
+    // Ela captura o ID da matéria e o número do trimestre da URL.
+    path: ':materiaId/:trimestreNum',
+    loadComponent: () => import('./pages/trimestre-page/trimestre-page').then(c => c.TrimestrePage)
+  },
+  {
+    path: '**', // Rota para "Página não encontrada"
+    redirectTo: ''
+  }
 ];

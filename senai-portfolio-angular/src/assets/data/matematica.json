@@ -1,0 +1,54 @@
+{
+	"1": [
+		{
+			"id": "mat-01",
+			"tema": "Logaritmo e pH",
+			"descricao": "Soluções químicas de diferentes pH, indicadores de pH e interpretação usando funções logarítmicas.",
+			"habilidades": [
+				"EM13MAT305 - Resolver e elaborar problemas com funções logarítmicas em contextos como pH, sismos e radioatividade."
+			],
+			"imagens": [
+				"assets/images/1tri/mat/ph.png"
+			],
+			"link": "https://www.canva.com/design/DAGje6xIE_8/3GHpJYi_q_lVZc8HG1vkCg/edit?utm_content=DAGje6xIE_8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+		},
+		{
+			"id": "mat-02",
+			"tema": "Logaritmo e Decibelímetro",
+			"descricao": "Exploração de logaritmos aplicados à escala de decibéis e resolução de problemas relacionados.",
+			"habilidades": [
+				"H13 - Compreender e utilizar logaritmos em questões tecnológicas e em outras ciências."
+			],
+			"imagens": [
+				"assets/images/1tri/mat/Logaritimo-Decibelimetro.jpg"
+			],
+			"link": "https://drive.google.com/file/d/1l5pwGs7c70XbR95pD89qURNZHLD8_8a1/view?usp=sharing"
+		}
+	],
+	"2": [
+		{
+			"id": "mat-03",
+			"tema": "Trilha de Aprendizagem (Plurall)",
+			"descricao": "Copiar e resolver as questões da trilha de aprendizagem no caderno, com cálculos e justificativas, e inserir foto no portfólio.",
+			"habilidades": [
+				"H17 - Utilizar conceitos básicos de matemática financeira para compreensão, resolução e análise de situações-problema do cotidiano."
+			],
+			"imagens": [
+				"assets/images/1tri/mat/ph.png"
+			]
+		},
+		{
+			"id": "mat-04",
+			"tema": "Desenhando o Mundo com Ângulos",
+			"descricao": "Criar uma cena com IA envolvendo triângulo retângulo e descrever a situação para explorar trigonometria.",
+			"habilidades": [
+				"H19 - Utilizar formas geométricas espaciais para representar partes do mundo real."
+			],
+			"imagens": [
+				"assets/images/1tri/mat/Logaritimo-Decibelimetro.jpg"
+			]
+		}
+	],
+	"3": []
+}
+
