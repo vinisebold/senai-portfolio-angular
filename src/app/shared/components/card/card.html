@@ -1,63 +1,64 @@
 <div class="col-12" id="card">
-  <p>
-    <strong>Tema:</strong><br />
-    {{ data().tema }} <br /><br />
-
-    <strong>Habilidades Desenvolvidas:</strong><br />
-    @for (habilidade of data().habilidades; track $index) {
-      <span>{{ habilidade }}</span><br/>
-    }
-    <br />
-
-    <strong>Descrição detalhada da atividade:</strong><br />
-    {{ data().descricao }}
-  </p>
-
-  <div class="card" style="margin-left: 10px">
-    <h3>{{ data().tema }}</h3>
-
-    @if (data().imagens.length > 0) {
-
-      @if (data().imagens.length === 1) {
-        <a [href]="data().link" target="_blank">
-          <img [src]="data().imagens[0]" alt="Imagem do trabalho {{ data().tema }}" class="d-block w-100" style="border-radius: 2em" />
-        </a>
+  <div class="card-content">
+    <p>
+      <strong>Tema:</strong><br />
+      {{ data().tema }} <br /><br />
+      <strong>Habilidades Desenvolvidas:</strong><br />
+      @for (habilidade of data().habilidades; track $index) {
+        <span>{{ habilidade }}</span><br/>
       }
+      <br />
+      <strong>Descrição detalhada da atividade:</strong><br />
+      {{ data().descricao }}
+    </p>
+  </div>
 
-      @if (data().imagens.length > 1) {
-        <div id="carousel-{{data().id}}" class="carousel slide" data-bs-ride="carousel">
-          
+  <div class="card-carousel">
+    @if (data().imagens.length > 0) {
+      <div class="carousel-wrapper">
+        <div class="carousel-slides">
+          @for (imagem of data().imagens; track $index) {
+            <div class="carousel-item" [class.active]="$index === currentIndex()">
+              <img 
+                [src]="imagem" 
+                [alt]="'Imagem ' + ($index + 1) + ' do trabalho ' + data().tema"
+                (click)="zoomIn(imagem)" 
+              />
+            </div>
+          }
+        </div>
+
+        @if (data().imagens.length > 1) {
           <div class="carousel-indicators">
-            @for (imagem of data().imagens; track $index; let i = $index) {
+            @for (imagem of data().imagens; track $index) {
               <button
                 type="button"
-                [attr.data-bs-target]="'#carousel-' + data().id"
-                [attr.data-bs-slide-to]="i"
-                [class.active]="$first"
-                [attr.aria-current]="$first ? 'true' : null"
-                [attr.aria-label]="'Slide ' + (i + 1)">
+                class="indicator"
+                [class.active]="$index === currentIndex()"
+                (click)="goTo($index)"
+                [attr.aria-label]="'Slide ' + ($index + 1)">
               </button>
             }
           </div>
-
-          <div class="carousel-inner">
-            @for (imagem of data().imagens; track $index; let i = $index) {
-              <div class="carousel-item" [class.active]="$first">
-                <img [src]="imagem" class="d-block w-100" [alt]="'Imagem ' + (i + 1) + ' do trabalho ' + data().tema" />
-              </div>
-            }
-          </div>
-
-          <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carousel-' + data().id" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+          <button type="button" class="carousel-control prev" (click)="prev()">
+            <span class="control-icon">&lt;</span>
+            <span class="sr-only">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carousel-' + data().id" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+          <button type="button" class="carousel-control next" (click)="next()">
+            <span class="control-icon">&gt;</span>
+            <span class="sr-only">Next</span>
           </button>
-        </div>
-      }
+        }
+      </div>
     }
-    </div>
+  </div>
 </div>
+
+@if (zoomedImageUrl(); as imageUrl) {
+  <div class="image-zoom-overlay" (click)="zoomOut()">
+    <button class="close-zoom-button" (click)="zoomOut()" aria-label="Fechar imagem">&times;</button>
+    <div class="image-zoom-content">
+      <img [src]="imageUrl" alt="Imagem ampliada do trabalho {{ data().tema }}" (click)="$event.stopPropagation()" />
+    </div>
+  </div>
+}
