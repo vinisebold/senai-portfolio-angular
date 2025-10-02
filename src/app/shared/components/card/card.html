@@ -10,6 +10,11 @@
       <br />
       <strong>Descrição detalhada da atividade:</strong><br />
       {{ data().descricao }}
+      @if (data().link) {
+        <br /><br />
+        <strong>Link externo:</strong><br />
+        <a [href]="data().link" target="_blank" rel="noopener noreferrer">Acessar projeto completo</a>
+      }
     </p>
   </div>
 

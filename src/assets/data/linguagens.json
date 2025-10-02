@@ -43,24 +43,24 @@
 				"H15 - Produzir trabalhos individuais e coletivos, explorando materiais e técnicas artísticas."
 			],
 			"imagens": [
-				"assets/images/2tri/ling/Record of the Dogs/1.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/2.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/3.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/4.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/5.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/6.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/7.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/8.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/9.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/10.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/11.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/12.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/13.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/14.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/15.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/16.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/17.jpg",
-				"assets/images/2tri/ling/Record of the Dogs/18.jpg"
+				"assets/images/2tri/ling/record-of-the-dogs/1.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/2.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/3.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/4.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/5.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/6.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/7.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/8.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/9.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/10.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/11.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/12.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/13.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/14.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/15.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/16.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/17.jpg",
+				"assets/images/2tri/ling/record-of-the-dogs/18.jpg"
 			],
 			"link": "https://www.canva.com/design/DAGp9P9uNUQ/Dmxl_D5vp1exJA5PYSApCg/edit?utm_content=DAGp9P9uNUQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
 		},
@@ -74,6 +74,18 @@
 			],
 			"imagens": [
 				"assets/images/2tri/ling/HQ.png"
+			]
+		},
+		{
+			"id": "ling-06",
+			"tema": "Vida Saudável",
+			"descricao": "Escrever sua versão da música, garantindo o uso de figuras de linguagem. A paródia deve ser estruturada em pequenos trechos para facilitar a adaptação para um formato. Criar quadrinhos com imagens representando cada trecho da paródia. Utilizar folha A3, 8 a 10 quadrinhos. Incorporar balões de fala, expressões faciais e cenários que reforcem o significado das figuras de linguagem presentes no texto.",
+			"habilidades": [
+				"H15 - Produzir trabalhos individuais e coletivos, explorando materiais e técnicas ligados ao universo das composições artísticas e de práticas corporais.",
+				"HS14 - Comunicação por meio de plataformas multimídia analógicas e digitais, com conhecimento de meios diversos, como áudio, textos, imagens, gráficos e linguagens verbais, artísticas, científicas, matemáticas, cartográficas, corporais e multimodais, em diferentes contextos buscando adequação ao interlocutor."
+			],
+			"imagens": [
+				"assets/images/2tri/ling/1000056080.jpg"
 			]
 		}
 	],

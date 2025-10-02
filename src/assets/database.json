@@ -2,7 +2,7 @@
   "materias": [
     {
       "id": "ciencias-natureza",
-      "nome": "Ciências da Natureza"
+      "nome": "Ciências Natureza"
     },
     {
       "id": "matematica",
@@ -10,11 +10,11 @@
     },
     {
       "id": "linguagens",
-      "nome": "Linguagens e suas Tecnologias"
+      "nome": "Linguagens"
     },
     {
       "id": "ciencias-humanas",
-      "nome": "Ciências Humanas e Sociais Aplicadas"
+      "nome": "Ciências Humanas"
     }
   ]
 }

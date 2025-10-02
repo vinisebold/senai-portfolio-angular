@@ -2,10 +2,10 @@
 	"1": [
 		{
 			"id": "mat-01",
-			"tema": "Logaritmo e pH",
-			"descricao": "Soluções químicas de diferentes pH, indicadores de pH e interpretação usando funções logarítmicas.",
+			"tema": "Medição de pH: Importância e Uso do pHmetro",
+			"descricao": "Soluções químicas de diferentes pH, indicadores de pH (papel tornassol ou solução de fenolftaleína), calculadoras, tabela de pH de substância do cotidiano.",
 			"habilidades": [
-				"EM13MAT305 - Resolver e elaborar problemas com funções logarítmicas em contextos como pH, sismos e radioatividade."
+				"EM13MAT305 - Resolver e elaborar problemas com funções logarítmicas nos quais seja necessário compreender e interpretar a variação das grandezas envolvidas, em contextos como os de abalos sísmicos, pH, radioatividade, Matemática Financeira, entre outros."
 			],
 			"imagens": [
 				"assets/images/1tri/mat/ph.png"
@@ -17,7 +17,7 @@
 			"tema": "Logaritmo e Decibelímetro",
 			"descricao": "Exploração de logaritmos aplicados à escala de decibéis e resolução de problemas relacionados.",
 			"habilidades": [
-				"H13 - Compreender e utilizar logaritmos em questões tecnológicas e em outras ciências."
+				"H13 - Compreender e utilizar logaritmos em questões tecnológicas e em outras ciências, para expressar grandezas cujo intervalo de variação é exponencial."
 			],
 			"imagens": [
 				"assets/images/1tri/mat/Logaritimo-Decibelimetro.jpg"
@@ -29,23 +29,23 @@
 		{
 			"id": "mat-03",
 			"tema": "Trilha de Aprendizagem (Plurall)",
-			"descricao": "Copiar e resolver as questões da trilha de aprendizagem no caderno, com cálculos e justificativas, e inserir foto no portfólio.",
+			"descricao": "Acessar a trilha de aprendizagem da disciplina na plataforma Plurall. Copiar todas as questões da trilha no caderno, com letra legível, respeitando a numeração original. Resolver todas as questões com atenção, mostrando os cálculos, justificativas e respostas completas. Tirar uma foto nítida da atividade pronta no caderno e inserir no portfólio.",
 			"habilidades": [
-				"H17 - Utilizar conceitos básicos de matemática financeira para compreensão, resolução e análise de situações-problema do cotidiano."
+				"H17 - Utilizar conceitos básicos de matemática financeira para compreensão, resolução, elaboração e análise de situações-problemas do cotidiano."
 			],
 			"imagens": [
-				"assets/images/1tri/mat/ph.png"
+				"assets/images/2tri/mat/aline2.jpg"
 			]
 		},
 		{
 			"id": "mat-04",
-			"tema": "Desenhando o Mundo com Ângulos",
-			"descricao": "Criar uma cena com IA envolvendo triângulo retângulo e descrever a situação para explorar trigonometria.",
+			"tema": "Desenhando o Mundo com Ângulos - Criando Cenas com IA e Trigonometria",
+			"descricao": "Pensar em uma cena realista que envolva um triângulo retângulo (ex: alpinista subindo uma montanha, bombeiro em uma escada, menino empinando pipa, drone voando com ângulo de elevação, sombra de uma árvore ao entardecer). Criar a descrição da cena com detalhes e usar IA para gerar a imagem ilustrativa.",
 			"habilidades": [
-				"H19 - Utilizar formas geométricas espaciais para representar partes do mundo real."
+				"H19 - Utilizar formas geométricas espaciais para representar ou visualizar partes do mundo real, como peças mecânicas, embalagens e construções."
 			],
 			"imagens": [
-				"assets/images/1tri/mat/Logaritimo-Decibelimetro.jpg"
+				"assets/images/2tri/mat/aline1.png"
 			]
 		}
 	],

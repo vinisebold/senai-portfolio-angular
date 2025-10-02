@@ -1,1 +1,62 @@
-<p>home works!</p>
+<section>
+  <div class="row justify-content-center align-items-center" id="cardNome">
+    <div class="col-md-5 col-lg-4">
+      <div class="nomePrincipal">
+        VINICIUS<br />
+        SEBOLD<br />
+        PEREIRA
+      </div>
+    </div>
+    <div class="col-md-5 col-lg-4">
+      <div class="sobre-content">
+        <h2>Sobre Mim</h2>
+        <p>
+          Vinicius Sebold Pereira, 16 anos. Estudante do 2º ano do Técnico em Desenvolvimento de Sistemas Integrado ao
+          Ensino Médio no Senai Blumenau.
+        </p>
+        <p>
+          Tenho grande interesse pela área de tecnologia e busco constantemente aprimorar meus conhecimentos através
+          de estudos, prática e desenvolvimento de projetos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content Container -->
+<main class="container">
+  <!-- Intro Section -->
+  <section class="content" id="bem-vindo">
+    <h2>Bem-vindo!</h2>
+    <p>Este portfólio foi desenvolvido utilizando Angular, TypeScript e SCSS.</p>
+    <p>Navegue pelas matérias no menu superior para ver os projetos organizados por trimestre.</p>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="projetos" id="projetos">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Projetos Recentes</h2>
+      </div>
+      
+      @for (card of recentProjects; track card.id) {
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="project-card" [routerLink]="card.route">
+            <div class="project-card-image">
+              <img [src]="card.image" [alt]="card.tema" />
+            </div>
+            <div class="project-card-content">
+              <h3>{{ card.tema }}</h3>
+              <p class="project-materia">{{ card.materia }} - {{ card.trimestre }}º Trimestre</p>
+              <p class="project-description">{{ card.descricao | slice:0:120 }}...</p>
+            </div>
+          </div>
+        </div>
+      } @empty {
+        <div class="col-12">
+          <p class="text-center">Nenhum projeto disponível no momento.</p>
+        </div>
+      }
+    </div>
+  </section>
+</main>
