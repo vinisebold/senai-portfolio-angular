@@ -58,6 +58,24 @@
 			]
 		}
 	],
-	"3": []
+	"3": [
+		{
+			"id": "ch-04",
+			"tema": "Slides: Blocos Econômicos",
+			"descricao": "Interpretar, em fontes orais, visuais, documentais, materiais, informações sobre a dinâmicas sociais ao longo do tempo.",
+			"habilidades": [
+				"C4 - Interpretar dados e informações referentes aos aspectos políticos, econômicos, sociais e culturais da sociedade contemporânea"
+			],
+			"imagens": [
+				"assets/images/3tri/ch/brics/1.jpg",
+				"assets/images/3tri/ch/brics/2.jpg",
+				"assets/images/3tri/ch/brics/3.jpg",
+				"assets/images/3tri/ch/brics/4.jpg",
+				"assets/images/3tri/ch/brics/5.jpg",
+				"assets/images/3tri/ch/brics/6.jpg",
+				"assets/images/3tri/ch/brics/7.jpg"
+			]
+		}
+	]
 }
 
