@@ -87,6 +87,18 @@
         "assets/images/3tri/cn/manganes/2.png",
         "assets/images/3tri/cn/manganes/3.png"
       ]
-    }
+    },
+    		{
+			"id": "cn-08",
+			"tema": "Mapa Mental PILHAS - Eletroquímica",
+			"descricao": "Construir um mapa mental sobre pilhas e eletroquímica.",
+			"habilidades": [
+				"C2 - Aplicar os conceitos fundamentais e estruturas procedimentais das Ciências da Natureza na explicação de fenômenos cotidianos, bem como dominar processos e práticas da investigação científica.",
+				"H9 - Explicar os conceitos de energia, matéria, vida e transformação para explicar fenômenos naturais e procedimentos tecnológicos."
+			],
+			"imagens": [
+				"assets/images/3tri/cn/mapa-mental-pilhas.jpg"
+			]
+		}
   ]
 }
