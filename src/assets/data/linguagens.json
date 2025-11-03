@@ -89,6 +89,19 @@
 			]
 		}
 	],
-	"3": []
+	"3": [
+		{
+			"id": "ling-07",
+			"tema": "Poster - Health and Medicine",
+			"descricao": "Criar um pôster em inglês destacando avanços na saúde e medicina.",
+			"habilidades": [
+				"C4 - Produzir textos orais e escritos, utilizando-os como meio de acesso e permanência no mundo do trabalho, respondendo aos diferentes propósitos da comunicação.",
+				"H24 - Produzir textos escritos de domínio acadêmico e educacional."
+			],
+			"imagens": [
+				"assets/images/3tri/ling/health-medicine.jpg"
+			]
+		}
+	]
 }
 
