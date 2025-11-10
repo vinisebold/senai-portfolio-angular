@@ -61,6 +61,20 @@
 	"3": [
 		{
 			"id": "ch-04",
+			"tema": "Trabalho de construção textual e conceitual sobre o Segundo Reinado",
+			"descricao": "Analisar as transformações naturais, sociais, econômicas, culturais e políticas no atual contexto brasileiro.",
+			"habilidades": [
+				"H24 - Reconhecer o impacto das transformações naturais, sociais, econômicas, culturais e políticas no atual contexto brasileiro."
+			],
+			"imagens": [
+				"assets/images/3tri/ch/reinado/1.jpg",
+				"assets/images/3tri/ch/reinado/2.jpg",
+				"assets/images/3tri/ch/reinado/3.jpg",
+				"assets/images/3tri/ch/reinado/4.jpg"
+			]
+		},
+				{
+			"id": "ch-05",
 			"tema": "Slides: Blocos Econômicos",
 			"descricao": "Interpretar, em fontes orais, visuais, documentais, materiais, informações sobre a dinâmicas sociais ao longo do tempo.",
 			"habilidades": [
