@@ -49,6 +49,19 @@
 			]
 		}
 	],
-	"3": []
+	"3": [
+		{
+			"id": "mat-05",
+			"tema": "Construindo Minha Tabela Trigonométrica",
+			"descricao": "Nesta atividade, os estudantes deverão construir a tabela trigonométrica a partir de valores fornecidos de cateto oposto, cateto adjacente e hipotenusa, explorando na prática as razões trigonométricas seno, cosseno e tangente. Cada aluno deverá calcular os valores correspondentes, organizar os resultados em uma tabela criada manualmente, e desenhar a tabela na folha entregue pela professora, caprichando na apresentação e na clareza das informações. Após finalizar, deverão colar a folha no caderno e tirar uma foto do trabalho concluído, anexando-a posteriormente ao portfólio da disciplina, como registro do desenvolvimento e compreensão do conteúdo de trigonometria.",
+			"habilidades": [
+				"H18 - Identificar representações geométricas, planas e espaciais, para leitura, compreensão e ação sobre a realidade."
+			],
+			"imagens": [
+				"assets/images/3tri/mat/1.jpg",
+				"assets/images/3tri/mat/2.jpg"
+			]
+		}
+	]
 }
 
